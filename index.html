@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #body {
+        text-align: center;
+        background-color: aliceblue;
+        border: 2px solid black;
+        border-radius: 10px;
+        margin: 50px 500px;
+        padding-bottom: 50px;
+    }
+    #firstname {
+        padding: 5px;
+        width: 90%;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+    #lastname {
+        padding: 5px;
+        width: 90%;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+    #upemail {
+        padding: 5px;
+        width: 90%;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+    #uppassword {
+        padding: 5px;
+        width: 90%;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+    #confirmpass {
+        padding: 5px;
+        width: 90%;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+    #signupbtn {
+        padding: 5px;
+        width: 90%;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background-color: aquamarine;
+        font-weight: 800;
+        cursor: pointer;
+    }
+    #togglelink a {
+        border: 1px solid black;
+        background-color: blue;
+        padding: 5px;
+        text-decoration: none;
+        border-radius: 5px;
+        color: #ffffff;
+        cursor: pointer;
+    }
+    #password {
+        padding: 5px;
+        width: 90%;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+    #email {
+        padding: 5px;
+        width: 90%;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+    #signinbtn {
+        padding: 5px;
+        width: 90%;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background-color: aquamarine;
+        font-weight: 800;
+        cursor: pointer;
+    }
+
+</style>
+<body id="body">
+    <div>
+        <div id="signupform">
+            <h1>Sign Up Page</h1>
+            <form action="">
+            <input type="text" id="firstname" placeholder="First Name" required><br>
+            <input type="text" id="lastname" placeholder="Last Name" required><br>
+            <input type="email" id="upemail" placeholder="Email" required><br>
+            <input type="password" id="uppassword" placeholder="Password" required><br>
+            <input type="password" id="confirmpass" placeholder="Confirm Password" required><br>
+            <p><input type="checkbox" id="checkbox" required>I agree with privacy and policy</p>
+            <button id="signupbtn">Sign Up</button><br>
+            </form>
+            <div id="togglelink">
+                Already have an account? <a id="showSignin">Login</a>
+            </div>
+        </div>
+        <div style="display: none;" id="signinform">
+            <h1>Sign In</h1>
+            <form action="">
+            <input type="email" id="loginemail" placeholder="Email or Username" required><br>
+            <input type="password" id="loginpassword" placeholder="Password" required><br>
+            <button id="signinbtn" type="button">Sign In</button><br>
+            </form>
+            <div id="togglelink">
+                Don't have and account? <a id="showSignup">Sign Up</a>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>
