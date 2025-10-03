@@ -1,7 +1,7 @@
-const signupForm = document.getElementById('signupform');
-const signinForm = document.getElementById('signinform');
-const showSigninLink = document.getElementById('showSignin');
-const showSignupLink = document.getElementById('showSignup');
+let signupForm = document.getElementById('signupform');
+let signinForm = document.getElementById('signinform');
+let showSigninLink = document.getElementById('showSignin');
+let showSignupLink = document.getElementById('showSignup');
 let firstName = document.getElementById('firstname');
 let lastName = document.getElementById('lastname');
 let email = document.getElementById('upemail');
@@ -41,25 +41,27 @@ signupBtn.addEventListener('click', () => {
         alert('Email already exists, kindly register with another email address!');
         return;
     }
+
     storedArr.push(userDetails);
     localStorage.setItem('userDetails', JSON.stringify(storedArr));
-    window.location.href = "./Class 3/index.html"
+    alert('Sign up successful!')
 })
 
 const signinBtn = document.getElementById('signinbtn');
 signinBtn.addEventListener('click', () => {
     const loginEmail = document.getElementById('loginemail').value;
     const loginPassword = document.getElementById('loginpassword').value;
+    const displayError = document.getElementById('display');
     
     let storedArr = JSON.parse(localStorage.getItem('userDetails')) || [];
 
     let userInfo = storedArr.find((userDetails) => userDetails.useremail === loginEmail && userDetails.password === loginPassword);
     
     if (userInfo) {
-        window.location.href = "./Class 3/index.html"
-        alert(`Login Successful! Welcome back, ${userDetails.fname}`)
+        alert(`Login Successful! Welcome back, ${userInfo.fname}`);
+        window.location.href = "./Class 3/index.html";
     }else {
-        alert('Invalid username or password')
+        displayError.innerHTML = `Invalid Username or Password`
     }
 })
 
