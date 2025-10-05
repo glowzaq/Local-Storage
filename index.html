@@ -11,9 +11,13 @@
         background-color: aliceblue;
         border: 2px solid black;
         border-radius: 10px;
-        margin: 50px 500px;
-        padding-bottom: 50px;
-    }
+        margin: 50px auto;
+        padding: 20px;
+        width: 90%;
+        max-width: 500px;
+        box-sizing: border-box;
+}
+
     #firstname {
         padding: 5px;
         width: 90%;
@@ -62,13 +66,7 @@
         color: #ffffff;
         cursor: pointer;
     }
-    #loginpassword {
-        padding: 5px;
-        width: 90%;
-        margin-bottom: 10px;
-        border-radius: 10px;
-    }
-    #loginemail {
+    #loginpassword, #loginemail {
         padding: 5px;
         width: 90%;
         margin-bottom: 10px;
@@ -83,6 +81,33 @@
         font-weight: 800;
         cursor: pointer;
     }
+    @media (max-width: 600px) {
+    #body {
+        margin: 20px auto;
+        padding: 15px;
+        width: 95%;
+    }
+
+    #signupbtn, 
+    #signinbtn, 
+    #firstname, 
+    #lastname, 
+    #upemail, 
+    #uppassword, 
+    #confirmpass, 
+    #loginemail, 
+    #loginpassword {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    #togglelink a {
+        display: inline-block;
+        margin-top: 10px;
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
 
 </style>
 <body id="body">
